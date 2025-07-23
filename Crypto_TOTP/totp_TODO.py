@@ -25,11 +25,13 @@ def gen_qr(user_id):
     secret = base64.b32encode(generate_shared_secret()).decode('utf-8')     # generate secret key
     
     # TODO: combine code# and user id to create URI (hint: match example URI format given above)
-    uri = None
+    uri = code1 + code2 + code3
     print(" >> URI generated: ", uri)
 
     # TODO: store secret into a file named "secret.txt"
-    file = None
+    file = open("secret.txt", "w")
+    file.write(secret)
+    file.close()
 
     # TODO: generate QR code based on the URI using snego library
     qrcode = segno.make(uri, micro=False)
