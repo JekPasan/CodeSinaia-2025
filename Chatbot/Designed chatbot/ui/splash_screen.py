@@ -8,7 +8,12 @@ def open_splash():
     splash_width = 400
     splash_height = 200
     
-    #TODO: set splash screen size and position 
+    #TODO: set splash screen size and position
+    screen_width = splash.winfo_screenwidth()
+    screen_height = splash.winfo_screenheight()
+    display_x = (screen_width // 2) - (splash_width // 2)
+    display_y = (screen_height // 2) - (splash_height // 2)
+    splash.geometry(f"{splash_width}x{splash_height}+{display_x}+{display_y}")
     
     
     splash.configure(bg="#333333")

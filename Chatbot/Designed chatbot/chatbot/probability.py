@@ -63,6 +63,11 @@ RULES = [
         "response": unknown(),
         "single_response": True
     },
+    {
+        "keywords": ["mustard", "67", "gurt"],
+        "response": lambda: get_custom_response("brainrot"),
+        "single_response": True,
+    },
     # TODO: creeaza tu un raspuns custom pentru un topic ales
     # exemmplu: care este culoarea ta preferata?
     {
